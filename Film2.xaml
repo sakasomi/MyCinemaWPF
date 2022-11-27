@@ -1,0 +1,90 @@
+﻿<Window x:Class="MyWPF.Film2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWPF"
+        mc:Ignorable="d"
+        Title="MyCinema"  Height="550" Width="1000" Icon="/pictures/logo.ico"
+        MaxHeight="550" MaxWidth="1000" MinWidth="1000" MinHeight="550">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+
+            <Image Source="pictures/back.png" Height="35" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,10,0,0" MouseDown="Back_MouseDown" >
+            </Image>
+            <Image Source="pictures/brat.jpg" Margin="15,67,43,120" Stretch="Fill"/>
+
+            <Label FontSize="15" Foreground="Gray" HorizontalAlignment="Left" Margin="15,0,0,72" Height="30" VerticalAlignment="Bottom" >Кинопоиск</Label>
+            <Label FontSize="15" Foreground="Gray" HorizontalAlignment="Left" Margin="207,0,0,72" Height="30" VerticalAlignment="Bottom" RenderTransformOrigin="0.212,0.432">IMDB</Label>
+
+            <Label FontWeight="Bold" FontSize="16" Height="30" Width="50"  HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="15,0,0,42" Content="8.26"/>
+            <Label Height="30" Width="50" FontWeight="Bold" FontSize="16"  HorizontalAlignment="Left"   VerticalAlignment="Bottom" Content="7.90" Margin="207,0,0,42"/>
+
+        </Grid>
+
+        <Grid Grid.Column="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="180"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Label  Foreground="Gray" FontSize="16" HorizontalAlignment="Left" Height="30">Боевик, драма, криминал</Label>
+                <Label FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold" >Брат</Label>
+                    
+            </Grid>
+
+            <Grid Grid.Row="1" Background="LightGray" Width="635" HorizontalAlignment="Left">
+
+                <Label FontSize="14">Режисер</Label>
+                <Label FontSize="14" Margin="80,0,210,0" HorizontalAlignment="Center">Алексей Балбанов</Label>
+
+                <Label FontSize="14" Margin="0,36,0,0">В ролях</Label>
+                <Label FontSize="14" Margin="190,36,0,0">Сергей Бодров, Виктор Сухоруков, Юрий Кузнецов</Label>
+
+                <Label FontSize="14" Margin="0,72,0,0">Хронометраж фильма</Label>
+                <Label FontSize="14" HorizontalAlignment="Center" Margin="20,72,210,0">100 мин</Label>
+
+                <Label FontSize="14" Margin="0,108,0,0">Страна</Label>
+                <Label FontSize="14" HorizontalAlignment="Center" Margin="20,108,210,0">Россия</Label>
+
+                <Label FontSize="14" Margin="0,144,0,0">Год</Label>
+                <Label FontSize="14" HorizontalAlignment="Center"  Margin="5,144,210,0">1997</Label>
+
+            </Grid>
+
+
+            <TextBlock FontSize="12" TextWrapping="Wrap"  Grid.Row="2" Width="635" HorizontalAlignment="Left" >
+                    Демобилизованный из армии, Данила Багров вернулся в родной городок. Но скучная жизнь российской провинции
+                    не устраивала его, и он решился податься в Петербург, где, по слухам, уже несколько лет процветает его старший 
+                    брат. Данила нашел брата. Но все оказалось не так просто — брат был наемным убийцей…
+
+            </TextBlock>
+
+            <Grid Grid.Row="3">
+
+                <Button Name="buttonBuy"  Width="250" Height="50" HorizontalAlignment="Left" FontSize="25" Background="#FF9D9AEF" Click="buttonBuy_Click">Выбрать места</Button>
+                <ComboBox Name="comboBoxDate"  Width="150" Height="20" VerticalAlignment="Center" Margin="50,0,0,0"></ComboBox>
+                <ComboBox Name="comboBoxTime" Width="150" Height="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,25,0"></ComboBox>
+
+            </Grid>
+            
+
+
+            </Grid>
+
+    </Grid>
+</Window>
